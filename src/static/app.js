@@ -76,6 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 messageDiv.textContent = error.message || "Unable to cancel signup. Please try again.";
                 messageDiv.className = "error";
                 console.error("Error canceling signup:", error);
+              } finally {
+                removeButton.disabled = false;
               }
 
               messageDiv.classList.remove("hidden");
